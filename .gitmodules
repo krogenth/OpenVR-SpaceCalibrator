@@ -1,3 +1,24 @@
-[submodule "lib/minhook"]
-	path = lib/minhook
-	url = https://github.com/bdunderscore/minhook.git
+[submodule "libs/Eigen"]
+	path = libs/Eigen
+	url = https://gitlab.com/libeigen/eigen.git
+[submodule "libs/imgui"]
+	path = libs/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "libs/implot"]
+	path = libs/implot
+	url = https://github.com/epezent/implot.git
+[submodule "libs/openvr"]
+	path = libs/openvr
+	url = https://github.com/ValveSoftware/openvr.git
+[submodule "libs/glfw"]
+	path = libs/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "libs/gl3w"]
+	path = libs/gl3w
+	url = https://github.com/skaslev/gl3w.git
+[submodule "libs/minhook"]
+	path = libs/minhook
+	url = https://github.com/TsudaKageyu/minhook.git
+[submodule "libs/tomlplusplus"]
+	path = libs/tomlplusplus
+	url = https://github.com/marzer/tomlplusplus.git

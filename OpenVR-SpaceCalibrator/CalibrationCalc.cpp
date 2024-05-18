@@ -223,7 +223,6 @@ Eigen::Vector3d CalibrationCalc::CalibrateTranslation(const Eigen::Matrix3d &rot
 			coefficients.row(i * 3 + axis) = deltas[i].second.row(axis);
 		}
 	}
-
 	Eigen::Vector3d trans = coefficients.bdcSvd(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(constants);
 	auto transcm = trans * 100.0;
 

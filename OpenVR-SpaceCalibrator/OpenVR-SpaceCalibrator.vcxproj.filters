@@ -51,12 +51,6 @@
     <ClInclude Include="CalibrationCalc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\implot\implot.h">
-      <Filter>Source Files\ImGui\ImPlot</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lib\implot\implot_internal.h">
-      <Filter>Source Files\ImGui\ImPlot</Filter>
-    </ClInclude>
     <ClInclude Include="VRState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -66,6 +60,12 @@
     <ClInclude Include="imgui_extensions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\libs\implot\implot.h">
+      <Filter>Source Files\ImGui\ImPlot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\implot\implot_internal.h">
+      <Filter>Source Files\ImGui\ImPlot</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -73,21 +73,6 @@
     </ClCompile>
     <ClCompile Include="Calibration.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lib\imgui\imgui.cpp">
-      <Filter>Source Files\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lib\imgui\imgui_impl_glfw.cpp">
-      <Filter>Source Files\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lib\imgui\imgui_impl_opengl3.cpp">
-      <Filter>Source Files\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lib\gl3w\src\gl3w.c">
-      <Filter>Source Files\GL</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lib\imgui\imgui_draw.cpp">
-      <Filter>Source Files\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="EmbeddedFiles.cpp">
       <Filter>Source Files</Filter>
@@ -107,24 +92,6 @@
     <ClCompile Include="CalibrationCalc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\lib\imgui\imgui_tables.cpp">
-      <Filter>Source Files\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lib\imgui\imgui_widgets.cpp">
-      <Filter>Source Files\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lib\implot\implot.cpp">
-      <Filter>Source Files\ImGui\ImPlot</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lib\implot\implot_demo.cpp">
-      <Filter>Source Files\ImGui\ImPlot</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lib\implot\implot_items.cpp">
-      <Filter>Source Files\ImGui\ImPlot</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lib\imgui\imgui_demo.cpp">
-      <Filter>Source Files\ImGui</Filter>
-    </ClCompile>
     <ClCompile Include="CalibrationDebug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -136,6 +103,39 @@
     </ClCompile>
     <ClCompile Include="imgui_extensions.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\gl3w\src\gl3w.c">
+      <Filter>Source Files\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\implot\implot.cpp">
+      <Filter>Source Files\ImGui\ImPlot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\implot\implot_demo.cpp">
+      <Filter>Source Files\ImGui\ImPlot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\implot\implot_items.cpp">
+      <Filter>Source Files\ImGui\ImPlot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\imgui\imgui.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\imgui\imgui_demo.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\imgui\imgui_draw.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\imgui\imgui_tables.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\imgui\imgui_widgets.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\imgui\backends\imgui_impl_glfw.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\imgui\backends\imgui_impl_opengl3.cpp">
+      <Filter>Source Files\ImGui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

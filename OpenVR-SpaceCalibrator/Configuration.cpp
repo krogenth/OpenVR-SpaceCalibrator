@@ -1,13 +1,82 @@
 #include "stdafx.h"
 #include "Configuration.h"
 
-#include <picojson.h>
+#include <toml++/toml.hpp>
 
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <iomanip>
 #include <limits>
+
+void configuration::LoadProfile(CalibrationContext& ctx)
+{
+
+}
+
+void configuration::SaveProfile(CalibrationContext& ctx)
+{
+
+}
+
+static toml::table LoadTomlFile(std::string_view filepath)
+{
+	toml::table table;
+	try
+	{
+		table = toml::parse_file(filepath);
+	}
+	catch (const toml::parse_error& error)
+	{
+		std::cerr << "Parsing failed: " << error << '\n';
+	}
+
+	return table;
+}
+
+void LoadProfile(CalibrationContext& ctx)
+{
+	// @TODO: Rewrite this to migrate configs from the registry to the spacecal directory
+	//        I don't know why whoever wrote this thought writing to the registry in the 2020s was a good idea...
+	//        NOTE: HKEY_CURRENT_USER_LOCAL_SETTINGS evaluates to	HKCU\Software\Classes\Local Settings
+	//              Settings are currently stored at				HKCU\Software\Classes\Local Settings\Software\OpenVR-SpaceCalibrator
+
+	ctx.validProfile = false;
+
+	auto str = ReadRegistryKey();
+	if (str == "")
+	{
+		std::cout << "Profile is empty" << std::endl;
+		ctx.Clear();
+		return;
+	}
+
+	try
+	{
+		std::stringstream io(str);
+		ParseProfile(ctx, io);
+		std::cout << "Loaded profile" << std::endl;
+	}
+	catch (const std::runtime_error& e)
+	{
+		std::cerr << "Error loading profile: " << e.what() << std::endl;
+	}
+}
+
+void SaveProfile(CalibrationContext& ctx)
+{
+	std::cout << "Saving profile to registry" << std::endl;
+
+	std::stringstream io;
+	WriteProfile(ctx, io);
+	WriteRegistryKey(io.str());
+}
+
+
+
+
+
+
 
 static picojson::array FloatArray(const float *buf, int numFloats)
 {
@@ -318,6 +387,8 @@ static void WriteRegistryKey(std::string str)
 
 	RegCloseKey(hkey);
 }
+
+
 
 void LoadProfile(CalibrationContext &ctx)
 {

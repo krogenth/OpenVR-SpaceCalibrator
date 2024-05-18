@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include <imgui/imgui.h>
+#include <imgui.h>
 #include "imgui_extensions.h"
 
 void TextWithWidth(const char *label, const char *text, float width);
